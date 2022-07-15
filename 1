@@ -48,6 +48,12 @@ NIC teaming is not supported in AWS and in ENIs
 
 In route table, default route in destination is always the VPC CIDR
 
+Elastic IP - You can have default 5 IPs. These are public IPs
+AWS recommends to use elastic IP
+
+Assume that we have two subnets in a single AZ
+You can create an ec2 instance and attach two ENI.
+One ENI can be associated to Subnet A and the second one can be associated to Subnet B
 
 
 
