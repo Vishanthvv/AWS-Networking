@@ -56,6 +56,11 @@ You can create an ec2 instance and attach two ENI.
 One ENI can be associated to Subnet A and the second one can be associated to Subnet B
 
 Now ENI one (Subnet A) can be used for public connection using IGW and ENI two (Subnet B) can be used for Corporate connection using VGW
+This approach is dual home
+
+Auto assign IP is nothing but the IP is collecting from DHCP
+
+NACL is subnet level and SG in instance/ENI level
 
 
 
