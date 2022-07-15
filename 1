@@ -7,4 +7,13 @@ Public services sits outside of the VPC
 Subnet cannot span AZ
 
 Default upto 5 VPCs can be created in a region for an account. However you can increase it after opening a ticket with AWS
+CIDR - Classless intert domain routing
+It is very important to know the number of IP address required before planning a VPC
+x.x.x.x/24 = 2 (32 - 24) = 2 *8 = 2 x 2 x 2 x 2 x 2 x 2 x 2 x 2
+which is 256 IP
+
+Here AWS reservers 5 IPS, so used will be 251 IPs
+
+
+
 
