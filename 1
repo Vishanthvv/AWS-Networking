@@ -60,7 +60,15 @@ This approach is dual home
 
 Auto assign IP is nothing but the IP is collecting from DHCP
 
-NACL is subnet level and SG in instance/ENI level
+NACL is subnet level and SG in ENI level and not to instance
+SG are stateful which means return traffic is automatically allowed. Can specify allow rules not deny rules
+NACL is stateless which means return traffic should be explicitly allowed by rules. can specify allow and deny rules
+
+Ingress traffic is always inbound traffic and egress traffic is always outbound traffic
+
+
+
+
 
 
 
