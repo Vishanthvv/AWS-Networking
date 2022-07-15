@@ -28,6 +28,24 @@ AWS reserves first four IP address and last IP address for internal use
 
 Avoid using the default VPC, if you are using inter VPC communication
 
+VPC router are highly available and occupies one IP address on every subnet associated with our VPC
+It allows communication between subnets in the same VPC. This is what static 'local' route table entry defines.
+
+A logical construct where all routing decisions begin.
+This is the first place where packet hits when leaving resources that are in a subnet/VPC
+VPC router cannot be seen in the AWS console, VPC router will be present in every subnet
+When you create a VPC, it will create a logical component created named as route tables (Main route table)
+
+Recommended to create custom route table per subnet
+
+
+IGW - They are the interpretor between VPC and public network/ Internet
+VGW -  (Virtual private gateway) used as an interface t interconnect the onpremise network or VPN
+
+
+
+
+
 
 
 
