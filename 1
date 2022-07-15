@@ -14,6 +14,24 @@ which is 256 IP
 
 Here AWS reservers 5 IPS, so used will be 251 IPs
 
+You can choose a CIDR between /16 and /28 CIDR block
+
+Default VPC CIDR is always is 172.31.x.x/16
+
+Assume that you created a VPC in a region which is having 3 AZ
+You have given VPC CIDR as 10.0.0.0/16
+You need to divide the above CIDR to three parts and assign to 3 AZs
+
+Smallest CIDR block you can use is /28 and the largest is /16
+AWS reserves first four IP address and last IP address for internal use
+
+
+Avoid using the default VPC, if you are using inter VPC communication
+
+
+
+
+
 
 
 
