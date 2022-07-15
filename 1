@@ -42,7 +42,12 @@ Recommended to create custom route table per subnet
 IGW - They are the interpretor between VPC and public network/ Internet
 VGW -  (Virtual private gateway) used as an interface t interconnect the onpremise network or VPN
 
-ENI - Conntected to an instance in an VPC and are associated with a subnet
+ENI - Conntected to an instance in an VPC and are associated with a subnet, will be having MAC ID
+SG can be attached to ENI
+NIC teaming is not supported in AWS and in ENIs
+
+In route table, default route in destination is always the VPC CIDR
+
 
 
 
