@@ -72,6 +72,15 @@ It should open in inbound and outbound
 NAT gateways are managed by AWS, scales up to 45GB
 NAT instance is customer responsibility, bandwitdh depends on the instance type
 
+Two types - Interface endpoint & Gateway endpoint
+
+Gateway endpoint only supports - S3 & DynamoDB
+Interface endpoint powered by AWS powerlink
+
+VPC endpoint - basically allowed to communicate private subnet to S3 for example
+Endpoints are regional service. You cannot create an endpoint and access S4 in different region
+You can have multiple endpoints in a vpc. SG can be used to control access for endpoints
+
 
 
 
