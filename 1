@@ -81,6 +81,20 @@ VPC endpoint - basically allowed to communicate private subnet to S3 for example
 Endpoints are regional service. You cannot create an endpoint and access S4 in different region
 You can have multiple endpoints in a vpc. SG can be used to control access for endpoints
 
+Check the VPC peering FAQ
+VPC peering will work only if CIDR block is different
+Flowlogs may be defined for VPCs, Subnet, ENI
+
+Flowlogs does not capture all traffics like;
+EC2 dns request 
+Amazon windows license activiation
+Instance metadata
+Amazon time sync service
+DHCP traffic
+Default VPC router
+Endpoint service
+Does not capture application data
+
 
 
 
