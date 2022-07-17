@@ -81,6 +81,16 @@ To lock users to a specfic region, consider not setting a default location
 
 To improve the accuracy of a geolocation routing, use edns-client-subnet extension
 
+Healthcheck is used for failover
+Define target endpoints by IP address or domain name
+Protocol used to check are http, https, tcp
+Port number
+Optional file path for http/https checks
+
+A check fails if there is no response
+4 seconds for http/https
+10 seconds for tcp
+
 
 
 
