@@ -26,6 +26,13 @@ Non-Authorative NS - Points to other servers or servers cached content from othe
 
 Zones - holds important information in how to route raffic for domain names and its sub domains
 
+Records - A & AAAA - IPV4 & IPV6
+CNAME - ALIAS Records
+MX - Used to define mail exchange servers
+TEXT Records - Holds test information
+PTR record is a reverse A record lookup, maps an ipaddress to a host
+
+
 
 
 
