@@ -67,6 +67,23 @@ Returns IP address clients
 No query charges
 Can be used to represent zone apex
 
+You need to give a VPC id for private zone
+
+Routing policies determines how to respond to queries, can be assoaciated with health checks
+Simple, weighted, latency based, failover , geolocation & multi value response routing policy
+
+
+Failover routing policy
+
+
+Geolocation route policy - The most specific location is always preferred
+To lock users to a specfic region, consider not setting a default location
+
+To improve the accuracy of a geolocation routing, use edns-client-subnet extension
+
+
+
+
 
 
 
