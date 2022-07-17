@@ -31,6 +31,48 @@ CNAME - ALIAS Records
 MX - Used to define mail exchange servers
 TEXT Records - Holds test information
 PTR record is a reverse A record lookup, maps an ipaddress to a host
+SOA - Start of authority
+CAA - Certificate authority auhtorization
+NAPTR - Name authority pointer
+SPF - Send policy framework
+SRV - Service locator
+
+
+Hosted ZONES in AWS
+
+Public and Private
+
+Public - Request from the public internet (External)
+Private - Request from the VPC (Internal). VPCs must have DNS support and DNS hostnames enabled
+Private domains do not require to register with ICAAN
+
+CNAME vs Alias
+Both resolve DNS queries using other records
+
+CNAME -
+
+DNS Record Type
+Refered to as an alias
+Redirects to other DNS record names
+Returns FQDN to clients
+Charge per query
+Name cannot be reqused in zone
+
+Alias -
+Not a DNS record type
+AWS route 53 extension
+Redirects to AWS service objects
+Returns IP address clients
+No query charges
+
+
+
+
+
+
+
+
+
 
 
 
