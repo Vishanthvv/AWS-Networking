@@ -1,0 +1,65 @@
+You are reviewing the architecture for a current setup where a VPC endpoint has been created to access S3 data privately within a VPC. The default endpoint policy is in place, and when trying to access the bucket, 
+your access is denied. What can be done to solve this issue?
+
+Add the VPC endpoint to the S3 bucket policy.
+Add the VPC ID to the S3 bucket policy.
+
+Network Access Control Lists or NACLs are stateless firewall on a subnet. They have an ordered lists of rules where the lowest rule number is 
+evaluated first and higher rule numbers are evaluated after. Rules can be defined as allow or deny rules.
+
+As a network engineer, you are in charge of adding and removing rules to a particular security group associated with some of the IPv4 resources your team is managing. 
+You are making an API call to add a particular inbound rule and receiving the following error back: RulesPerSecurityGroupLimitExceeded. 
+What is the reason and solution for this error?
+
+You have the maximum number of inbound rules for the security group already defined at 60. Create another security 
+group with the inbound rule, and attach it to the ENI of the resource you are managing.
+
+Your organization is using a single EC2 instance for a ticketing system and its related traffic. This custom application has been installed on a Linux-based instance. 
+Which of the following implementations can help achieve higher bandwidth for the ticketing system and its traffic?
+
+We can enable Enhanced Networking to help achieve high bandwidth.
+The other answers mainly deal with multiple EC2 instances when we only have one EC2 for our application.
+
+Security groups are assigned to instances (technically the network adaptor attached to the instance). Security Group rules are allow rules only, 
+and are stateful meaning that return traffic is automatically allowed.
+
+Your team is using an EC2 NAT instance for NAT translation in your VPC. The private subnet has a route table with the 0.0.0.0/0 routing to the NAT instance.
+Whenever packages are installed onto private instances, the traffic is extremely slow. What can be done to resolve this issue?
+
+To increase the bandwidth first take a look at the instance type of the NAT instance. 
+Increasing the size of the underlying EC2 instance running the NAT translation could increase speed. 
+Also, migrating the NAT instance to a NAT gateway is a viable options since NAT gateways scale up to 45 Gbps.
+
+You launch an EC2 instance in a private subnet that needs to access the Internet to download and install the packages. 
+You decide to launch a NAT gateway in your VPC to provide NAT translation. Where in the VPC should the NAT gateway sit inside?
+
+Whenever we launch a NAT gateway, it must reside in a public subnet to provide NAT translation. Public and private hosted zones are part of Route 53.
+
+You work for a company who has a need to send large amounts of data that will be ingested by S3. The data that is ingested must be 
+encrypted in transit and this ingestion process will happen on a regular interval. 
+What option, in of itself, can accomplish this?
+
+Use HTTPS (TLS) for in transit encryption.
+
+To ensure that the data is encrypted during the intransit process, we can use HTTPS (TLS). 
+You should allow only encrypted connections over HTTPS (TLS) using the aws:SecureTransport condition on Amazon S3 bucket policies.
+The other answers do not guarantee the data will be encrypted during transit.
+
+You have been tasked with investigating and congregating all dropped traffic going to one network interface in your VPC when users try to access 
+your EC2 application. What is the most cost effective and least effort solution your can use to gather this information?
+
+Enabling VPC Flow Logs on the ENI attached to the EC2 instance is a quick solution to implement.
+All we need to capture is the rejected traffic (rather than all the traffic).
+Storing the information on CloudWatch is an easy way to congregate all of the logs together.
+
+You have multiple EC2 instances within a VPC that is located in us-west-2. You have been notified by another team member that
+these instances need to have optimal networking performance. These instance are communicating with other instances in other VPCs located
+in us-east-1 through VPC peering. Which of the following options are appropriate when ensuring the maximum network performance?
+
+Since the packets are going to leave the AWS region you cannot take advantage of the 9001 MTUs. Once they leave the region the packet will use 1500 MTUs. 
+You can however take advantage of Enhanced Networking capabilities on select instance types.
+
+What is the allowed secondary IPv4 CIDR block ranges for an AWS VPC?
+
+The allowed size for a secondary IPv4 CIDR block is between a /28 netmask and /16 netmask
+
