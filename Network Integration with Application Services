@@ -91,6 +91,15 @@ A check fails if there is no response
 4 seconds for http/https
 10 seconds for tcp
 
+Domainname health checkes only use IPV4
+
+Latency routing uses route 53 record associated with AWS region closest to requesting client
+Latency is tested against regional endpoints not the value of route 53 records
+
+Create IP address health checkes for endpoints using latency routing
+Route 53 health check prevents clients from being sent to oflline endpoints
+
+DNS fialover requires multiple records or IP addresses for a hostname
 
 
 
