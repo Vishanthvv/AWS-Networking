@@ -57,6 +57,7 @@ Redirects to other DNS record names
 Returns FQDN to clients
 Charge per query
 Name cannot be reqused in zone
+Not used to represent zone apex
 
 Alias -
 Not a DNS record type
@@ -64,6 +65,8 @@ AWS route 53 extension
 Redirects to AWS service objects
 Returns IP address clients
 No query charges
+Can be used to represent zone apex
+
 
 
 
