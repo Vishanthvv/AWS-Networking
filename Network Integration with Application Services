@@ -11,11 +11,21 @@ Geographic domain - .in, .au, .ae
 & aws is subdomain
 
 
-aws.amazon.com.
+aws.amazon.com. - fqdn
 
 subdomain com is the subdomain of root
 amazon is a sub domain of .com
 aws is a subdomain of amazon
+
+
+Name servers - Translates domain name to IP address
+Name servers can be authorative and non-authorative
+
+Authorative NS - Provides answers to queries they know about
+Non-Authorative NS - Points to other servers or servers cached content from other name servers data
+
+Zones - holds important information in how to route raffic for domain names and its sub domains
+
 
 
 
