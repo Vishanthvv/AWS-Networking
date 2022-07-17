@@ -1,0 +1,23 @@
+Basically DNS Indepth
+
+aws.amazon.com
+Here .com is the top level domain
+
+Generic domain - .org, .com, .cloud, net
+Geographic domain - .in, .au, .ae
+
+
+& Next is amazon - is second level domain
+& aws is subdomain
+
+
+aws.amazon.com.
+
+subdomain com is the subdomain of root
+amazon is a sub domain of .com
+aws is a subdomain of amazon
+
+
+
+
+
