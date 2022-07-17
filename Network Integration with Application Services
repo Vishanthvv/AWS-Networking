@@ -105,6 +105,12 @@ Creating healh checks for alias record in un necessary
 If health chek is not confgiured, Route 53 will never know the status of the endpoint and the query will be send to the endpoint
 So if you give a record A a weight of 10 and other record B a weight of 5, every 15 queries, Record A will server 10 and Record B will server 5
 
+If you are creating a failover routing policy, you need to specify which is primary record and which is secondary record
+
+If you are using latency based routing, you need to mention the region of the instance
+Latency based will not check the health of the instance
+
+
 
 
 
