@@ -63,3 +63,43 @@ What is the allowed secondary IPv4 CIDR block ranges for an AWS VPC?
 
 The allowed size for a secondary IPv4 CIDR block is between a /28 netmask and /16 netmask
 
+Gateway load balancer - Layer 3 
+Accessed as an endpoint service
+Not assigned an FQQDN
+Inorder to access GWLB, you need to access the endpoints
+
+Once the traffic receives to GWLB, it will behave as layer 4 which means it will transfer the data to target groups
+Encapsulated GENEVE protocol
+No IPV6 support
+Does not encrypt/decrypt
+Single listeneer accepts all traffic
+All traffic forwarded to a single target group
+Protocol is only geneve and port is 6081
+Flow stickiness
+
+Only access as a VPC endpoint service
+GWLB must be in a different subnet other than consumer VPC.supports applications that process network traffic flows
+
+
+Cloud front
+
+Regional edge cache is a mid cahce between edge and end user
+
+CF distribution define how cloudfront handles requests for content
+Applying changes will take time to reflect in all edge locations sat 15 minutes
+
+Cloud front origin defines where the original content is stored
+Origin is defined by FQDN, ELB, S3 BUCKET, Mediastore container, Media package endpoint, Custom FQDN
+Add origin as needed
+One origin as primary and secondary any numbers
+A viewer request is a request made by a client out over the public internet to a CloudFront edge location
+By default, all origin requests will connect to the origin within the AWS infrastructure using HTTP.
+
+Origin access identities are used in S3
+Recommended to set listener policy to https only
+
+
+
+
+
+
