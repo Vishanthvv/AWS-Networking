@@ -1,1 +1,29 @@
-    
+You are building a new highly secure web application. The requirements include TLS Mutual Authentication, where the webserver will also validate the identity of the client when authenticating. 
+Which type of Elastic Load Balancer and listener protocol would you use to best accomplish this requirement?    
+
+The Network Load Balancer with the TCP Listener is the best answer to this scenario since the NLB will pass the full TCP connection through to the webserver. 
+The web server can then handle the Mutual TLS Authentication, which cannot be handled natively by other ELB's at the time this question was written.
+This may change in future as AWS further develops Elastic Load Balancers.
+
+The customers that you serve content to use many different types of devices. For example, laptops, mobile devices, tablets, etc. You need to find a way to optimize 
+what users see and interact with depending on what type of device they are using. Which of the following strategies can be used to accomplish this?
+
+Using CloudFront and Lambda@Edge
+Use an Application Load Balancer target group rule which inspects a defined http header "User-Agent."
+
+You can stop sending traffic to a resource record in Route 53 of type weight routing by setting the weight to 0.
+
+Your team is planning to use an S3 bucket as its origin in conjunction with a CloudFront distribution. For compliance, 
+you'll need to ensure the S3 bucket is not accessible to the public but is still serving content via CloudFront. Which method accomplishes these requirements?
+
+Using an OAI (origin access identity) is like creating a virtual user who has permission to view the assets in S3. You can configure the permission 
+so that CloudFront can use the OAI to access and serve files to your users, but your users cannot use the direct URL to the S3 bucket to access a file there.
+
+Whenever the enableDnsHostnames attribute is set to true, what will Amazon do for you?
+The enableDnsHostnames attribute can be enabled to allow public DNS names to be assigned to EC2 instances inside your VPC.
+
+Whenever a user requests an object, CloudFront first checks the cache of the closest edge location. 
+If the content is cached then the cached objected is forwarded to the end user. If the content is not cached CloudFront reaches out to the origin. 
+When the first byte of content arrives to the edge location it is then forwarded onto the end user.
+
+
