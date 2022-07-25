@@ -1,0 +1,80 @@
+Hybrid Network and basics of VPN
+
+VPN -
+
+Requirements -                                    Solution
+Traffic must be secured                         Vpns encrypt traffic and isolate  
+Connection from multiple location               VPN use the public internet as infrastructure
+Fast and Inexpensive solution                   Can be quickly created and destroyed as needed
+
+Virtual Private Gateway (Main role in hybrid infra)
+
+Three gateways :-
+
+Internet gateway, VGW, Transit Gateway
+
+Virtual private gateway - Managed AWS service
+Acts as a router between your VPC and Non AWS-Managed Networks. Can be associted with multiple external connections. Can attach to only one VPC at a time
+VGW - Two types of connections - Site to site VPN & Direct connect
+Easy to deploy, need to give three values;
+Assign a name tag value
+Assign an ASN value (Autonomous System Numbers) ASN is simply and independant network
+
+
+Public ASN - A large organization will be having a single ASN and Private ASN to manage thier internal networks
+Only private ASN may be used for VGW configuration
+AWS default ASN is 64512 available in all regions
+Attach to a VPC
+
+AWS Hybrid routing
+
+Two types of route learning
+
+Static - Not helpfull or large organizations
+Dynamic - Widely used in large organizations. If network changes, router can learn it, they can change the information automatically adjusting itself.
+
+Site to site VPN - Dynamic or Static
+Direct Connect - Dynamic, Always use BGP
+
+In static, Routes are manually added by the adiministrator
+In dynamic, Routes learned by the VGW are automatically added to a route by a process called route propogation
+
+
+BGP
+
+Exterior routing protocol
+
+
+Extra routing protocols are used to share route availability information from one autonomous system to a different autonomous system.
+That's what BGP does.
+
+Routes to available networks or prefixes are going to be shared between peer BGP routers.
+These two peer routers have to be mutually configured. Remember, these are two routers in different autonomous systems.
+These are being configured by two different administrators. So they need to coordinate with each other to ensure that both of the routers
+are able to successfully communicate with each other. So they need to share IP address information and authentication information with
+each other beforehand, in order for the peering to be successful. No prefixes are ever automatically shared.
+
+
+BGP communicates over TCP port 179
+
+BGP doesn't particularly care about what routing protocols or policies are being used on the inside and from a BGP perspective,
+we collectively refer to that type of a protocol as an interior gateway protocol. OSPF REP again, those are examples of interior gateway protocols,
+but they are important because that's how BGP will learn about the other networks within an autonomous system from the interior gateway
+protocol.
+
+Another pair of terms to throw out at you are eBGP and iBGP for exterior and interior
+
+Direct connect connections always use BGP to communicate route information.
+They're always dynamic routing and our VPNs can be configured for dynamic routing as well.
+
+
+
+
+
+
+
+
+
+
+
+
