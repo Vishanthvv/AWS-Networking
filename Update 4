@@ -80,6 +80,44 @@ Shortest AS path
 Lowest Metric
 
 
+BGP cannot sense network quality
+Weight only applies to the local BGP router
+
+Assume you two BGP connection (A & B)
+A bandwidth is 1 GB
+B bandwidth is 10 GB
+
+You need to send traffic to B
+
+Your all Highest weight, Highest local preferance, Shortest AS path & Lowest Metric is same for both A & B
+Sill I need to use the B router
+
+For this you need to do the changes in Highest local preferance
+Local preference is shared with all iBGP peers
+Prefix learned from an iBGP peer are never advertised to other iBGP peers
+
+
+VPN & AWS
+
+Virtual private network - Logical network
+Private traffic is protected by a VPN protocol
+
+AWS support IPsec VPN & IKE
+
+IPsec - Encrypts data, Authenticates connections, Protocol suite
+IKE - Internet key exchange
+Encryption key management protocol, Negotiate and generates keys for security associations
+
+
+
+
+
+
+
+
+
+
+
 
 
 
