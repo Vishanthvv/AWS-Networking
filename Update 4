@@ -57,36 +57,27 @@ each other beforehand, in order for the peering to be successful. No prefixes ar
 
 BGP communicates over TCP port 179
 
-Technically is an exterior routing protocol
-
 BGP doesn't particularly care about what routing protocols or policies are being used on the inside and from a BGP perspective,
 we collectively refer to that type of a protocol as an interior gateway protocol. OSPF REP again, those are examples of interior gateway protocols,
 but they are important because that's how BGP will learn about the other networks within an autonomous system from the interior gateway
 protocol.
-
-Exterior routing protocol used to share route availability information from one ASN to different ASN, that what BGP does
 
 Another pair of terms to throw out at you are eBGP and iBGP for exterior and interior
 
 Direct connect connections always use BGP to communicate route information.
 They're always dynamic routing and our VPNs can be configured for dynamic routing as well.
 
-No prefixes (Network Routes) are automatically shared, It has to done by manually
-Network routes (Prefixes) are share between mutually configured peers
-
-Selects the best of multiple paths to the same destination. Will check highest weight, highest local preference, shortest AS paths, Lowest metric
-
-First BGP will check the prefix for the highest weight. If there is a highest weight, then that will be treated as the best prefix for thr destination
-default value os 32768
-
-Any prefix value which is having zero from a peer connection, then BGP router will always prefer prefiex for the local network instead of 
-sending of sending the traffic first ot reach the same network
-
-If the local preferance have the same value, then BGP will look for the shortest AS path. Which ever route have smallest numbers of hops, BGP will select it
+BGP allows autonomous systems to share network route information with each other. 
+BGP peering and network advertisement must be manually configured
+BGP does not care how two peers are physically connected
 
 
+BGP Prefix preference
 
-
+Highest weight
+Highest local preferance
+Shortest AS path
+Lowest Metric
 
 
 
