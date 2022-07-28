@@ -109,6 +109,9 @@ IKE - Internet key exchange
 Encryption key management protocol, Negotiate and generates keys for security associations
 
 
+First you need to create a VGW
+Second CGW
+Third VPN 
 
 
 
