@@ -1,6 +1,7 @@
 You are building a new highly secure web application. The requirements include TLS Mutual Authentication, where the webserver will also validate the identity of the client when authenticating. 
 Which type of Elastic Load Balancer and listener protocol would you use to best accomplish this requirement?    
 
+
 The Network Load Balancer with the TCP Listener is the best answer to this scenario since the NLB will pass the full TCP connection through to the webserver. 
 The web server can then handle the Mutual TLS Authentication, which cannot be handled natively by other ELB's at the time this question was written.
 This may change in future as AWS further develops Elastic Load Balancers.
@@ -10,6 +11,9 @@ what users see and interact with depending on what type of device they are using
 
 Using CloudFront and Lambda@Edge
 Use an Application Load Balancer target group rule which inspects a defined http header "User-Agent."
+
+If you ahve a global application spanned over europe, middle east, fareast, and US, then you should have a VPC in each region
+
 
 You can stop sending traffic to a resource record in Route 53 of type weight routing by setting the weight to 0.
 
