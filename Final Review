@@ -38,6 +38,11 @@ AWS IP Reservation -
 Best practices is to create custom route tables for each subnet
 
 
+ENI by default attached to an instance when an instance created.
+This cannot be detached
+
+
+
 
 
 
