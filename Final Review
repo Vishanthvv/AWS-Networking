@@ -22,7 +22,7 @@ When creating a subnet the smallest subnet range you can have is /28 netmask and
 AWS reserves the first four IP address and the last IP address of the subnet. So fice address is lawyas reserved
 
 
-VPC Routing
+VPC Routing (Higly Available) Defautl static route in each subnet is nothing but VPC routing
 
 This is the first place where packets hit while leaving resources that are in a VPC/Subnet
 VPC router is presented in all the subnets we creates
@@ -34,6 +34,11 @@ AWS IP Reservation -
 10.0.0.2 -> The IP address of the DNS server
 10.0.0.3 -> Reserved for future use
 10.0.0.255 -> Network broadcast address
+
+Best practices is to create custom route tables for each subnet
+
+
+
 
 
 
