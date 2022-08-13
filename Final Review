@@ -1,12 +1,10 @@
-CIDR - Classless interdomain routing which replaces the Class A,B,C 
+CIDR - Classless interdomain routing 
 
-
-
-
-
-
+CIDR (Classless Inter-Domain Routing) -- also known as supernetting -- is a method of assigning Internet Protocol (IP) addresses
+that improves the efficiency of address distribution and replaces the previous system based on Class A, Class B and Class C networks.
 
 A segment of a VPC that lives entirely within an availability zone
+
 Subnets cannot span more than one AZ
 Subnets can be public, private and VPN
 
@@ -17,5 +15,12 @@ AWS recommends in choosing a private addressing space is shown below;
 192.168.0.0 - 192.168.255.255 (Offers 1 /16 Range)
 172.16.0.0 - 172.31.255.255 (Offers 16 /16 Range)
 10.0.0.0 - 10.255.255.255 (Offers 256 /16 Range)
+
+
+NACL operates on a subnet level
+When creating a subnet the smallest subnet range you can have is /28 netmask and the largest is /16 netmask
+AWS reserves the first four IP address and the last IP address of the subnet. So fice address is lawyas reserved
+
+
 
 
