@@ -1,0 +1,14 @@
+CIDR - Classless interdomain routing which replaces the Class A,B,C 
+
+
+
+
+
+
+
+A segment of a VPC that lives entirely within an availability zone
+Subnets cannot span more than one AZ
+Subnets can be public, private and VPN
+
+Default VPC CIDR block is 172.31.0.0/16
+
