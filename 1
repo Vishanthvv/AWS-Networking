@@ -69,7 +69,7 @@ Ingress traffic is always inbound traffic and egress traffic is always outbound 
 ephermal ports are short living ports used by OS to communicate 
 It should open in inbound and outbound
 
-NAT gateways are managed by AWS, scales up to 45GB
+NAT gateways are managed by AWS, scales up to 45GB Bandwidth
 NAT instance is customer responsibility, bandwitdh depends on the instance type
 
 Two types - Interface endpoint & Gateway endpoint
@@ -78,7 +78,7 @@ Gateway endpoint only supports - S3 & DynamoDB
 Interface endpoint powered by AWS powerlink
 
 VPC endpoint - basically allowed to communicate private subnet to S3 for example
-Endpoints are regional service. You cannot create an endpoint and access S4 in different region
+Endpoints are regional service. You cannot create an endpoint and access S3 in different region
 You can have multiple endpoints in a vpc. SG can be used to control access for endpoints
 
 Check the VPC peering FAQ
