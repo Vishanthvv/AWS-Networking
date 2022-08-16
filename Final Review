@@ -41,6 +41,27 @@ Best practices is to create custom route tables for each subnet
 ENI by default attached to an instance when an instance created.
 This cannot be detached
 
+IGW can be attached to a single VPC
+Elastic IP is a public IP associated with a region
+
+NACL are applied to subnet - Process the traffic before it enters or leaves the subnet - stateless
+SG are applied to ENI or instance - statefull
+
+Ephermal port - Temperory ports
+
+You can use multiple SG to a single ENI
+
+Two endpoints -
+
+Gateway end point - S3 & DynamoDB
+Interface End point - Cover most of the AWS services. Which is powered by AWS private link
+
+Endpoints are region scoped service
+You cannot create a VPC endpoint for a VPC in different region than where the S3 is located
+You can multiple endpoints in the same VPC even for the same service
+
+
+
 
 
 
