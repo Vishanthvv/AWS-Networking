@@ -60,6 +60,8 @@ Endpoints are region scoped service
 You cannot create a VPC endpoint for a VPC in different region than where the S3 is located
 You can multiple endpoints in the same VPC even for the same service
 
+VPC peering use to communicate with other VPC
+VPC peering should be accepted by the other VPC
 
 
 
