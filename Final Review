@@ -63,6 +63,17 @@ You can multiple endpoints in the same VPC even for the same service
 VPC peering use to communicate with other VPC
 VPC peering should be accepted by the other VPC
 
+Capture information about IP traffic sessions processed by elastic network interfaces in your VPC
+Flowlogs may be defined for VPC, Subnet, ENI
+
+If in flowlogs, we defined subnet, all ENIs in the subnet will send logs to VPC
+
+Flowlog data may be send to S3 and cloudwatch log group
+
+Data reporting is not real time
+Flowlogs operates layer 3 and layer 4 OSI model
+Does not capture application data
+
 
 
 
