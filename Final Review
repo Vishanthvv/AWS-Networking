@@ -74,6 +74,36 @@ Data reporting is not real time
 Flowlogs operates layer 3 and layer 4 OSI model
 Does not capture application data
 
+Network Performance
+
+What is HPC?
+
+This allows us to basically take advantage of clusters of computers that perform some tasks that allows us to transmit and process mass amounts of data.
+
+3 Options for HPC network performance
+
+Instance type
+Placement groups
+Enable enhanced networking
+
+ENA will give 100 GBPS
+Intel 82599 virtual function interace
+
+
+You can use jumbo frames (Inside the AZ servers) MTU 9001, but if the packets are going out of VPC, then it will be 1500 MTU
+
+Route 53 is an authorative name server
+Routing policies are attached with health check
+
+Simple - plain and simple routing. default routing policy
+Weighted policy. Multiple resources performing the same function. You can move 20% of traffic  to one webserver and 80% traffic to other webserver
+
+
+
+
+
+
+
 
 
 
