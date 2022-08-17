@@ -96,7 +96,40 @@ Route 53 is an authorative name server
 Routing policies are attached with health check
 
 Simple - plain and simple routing. default routing policy
-Weighted policy. Multiple resources performing the same function. You can move 20% of traffic  to one webserver and 80% traffic to other webserver
+
+Weighted policy. Multiple resources performing the same function. You can move 20% of traffic  to one webserver and 80% traffic to other webserver (Health check is also used)
+If a record set weighatge is set to zero, then it will not be in the pool of active records.
+If all the record weightage is set to zero, then the traffic is distributed equally among all the records.
+
+Latency based policy - Fatest connection policy. Assume a user is browsing amazon.com from europe and a webserver is in london and user is connecting from 
+india and amazon.com webserver is in banglore. Indian user will connect to banglore webserver and europe user will get pages from london
+
+Failover - One or the other routing. It is similar like Active and Passive. Health check needs to be configured.
+           If Record A is unhealthy, then the traffic will move to Record B. If both the Record (EC2) is unhealth, then the traffic will move to record A
+
+Geolocation. Based on the geographical location.
+The most specific location is always preferred
+To local users to a specific region, consider not setting a default location
+The IP address is from DNS resolver
+
+Multi value response routing policy - Responds with multiple hosts. Only healthy hosts will respond
+
+Once an endpoint health check is defined, the respone test to the end point is performed by various health checkers from the world
+
+Route 53 health checks prevent clients from being sent to offline endpoints
+DNS failover requires configuring multiple IP address for the records
+
+Use IP address endpoint health check for resources hosted on redundant endpoints
+
+
+
+
+
+
+
+
+
+
 
 
 
