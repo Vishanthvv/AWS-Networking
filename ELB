@@ -1,15 +1,36 @@
+ELB is a regional resource, HA, Autoscale for workloads, can terminate HTTP/TLS connections which will offload 
 Single logical target for service request
 It is AWS managed platform as a service (Paas)
 Regional resource
 Three types 
 
 Application load balancer - http/https - Works on layer 7
+X-forwarded headers - Contianing information about the original requesdt client
+X-forwarded-for - Provide information about the original IPaddress
+X-forwarded-Proto - Provide information about the protocols used
+X forwarded-Port - provide the information about the port
+
+
 Network load balancer - TCP/UDP - Works on layer 4  - Route request by protocol and port number
-Classic load balancer - Layer 7 & layer 7 - https/https/tcp/tls - Route request by protocol and port number
+Classic load balancer - Layer 4 & layer 7 - https/https/tcp/tls - Route request by protocol and port number
 
 Gateway loal balancer - Works with application that operates inline with network traffic
 Uses GENEVE protocol to encapsulate the traffic
-Works on layer 3 & 4
+Layer 3 gateway
+Once traffic reaches GWLB, then it will function like layer 4
+All data forwarded to target group
+Encapsulated using GENEVE protocol
+No IPV6 support
+No encrypt/decrypt
+Single listener accepts all traffic
+Must use GENEVE Protocol and th eport number cannot be changed - Port (6081)
+Support flow stickness
+Accesible only as VPC endpoint services
+No FQDN
+Ingress and TGW is fully supported
+
+
+
 
 Targets should be in the same region but can be in different AZ
 Target group is a logical containers of targets
@@ -79,6 +100,20 @@ Consumers access endpoint services by creating interface endpoints in their own 
 Providers can approve access manually, automatically for select AWS principles, or automatically for all requests.
 And once the request has been approved, consumer request traffic is directed to the endpoint either by DNS name,
 in the case of network load balance frontend services, or by route table, in the case of gateway load balancer frontend services.
+
+In Application load balancer listener section, if you are using https then you need to select the certificate and in actions there is an authenticate tab. 
+This will offloads authentication from target client. Authentication mechanism used are Amazon cognito and OIDC (Open ID connect)
+Request can be conditionlally forwarded to one or more  target groups by reading request header content
+
+VPC endpoint do not use ALB and Classic load balancer
+VPC endpoints uses Gateway load balancer and Networjk load balancer
+
+In end point services, IPV4 traffic is over TCP only
+
+
+
+
+
 
 
 
