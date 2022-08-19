@@ -23,7 +23,7 @@ Encapsulated using GENEVE protocol
 No IPV6 support
 No encrypt/decrypt
 Single listener accepts all traffic
-Must use GENEVE Protocol and th eport number cannot be changed - Port (6081)
+Must use GENEVE Protocol and the port number cannot be changed - Port (6081)
 Support flow stickness
 Accesible only as VPC endpoint services
 No FQDN
