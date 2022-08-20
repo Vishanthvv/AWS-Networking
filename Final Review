@@ -121,6 +121,8 @@ DNS failover requires configuring multiple IP address for the records
 
 Use IP address endpoint health check for resources hosted on redundant endpoints
 
+Cache behaviors control how requests for content will be handled
+
 
 
 
