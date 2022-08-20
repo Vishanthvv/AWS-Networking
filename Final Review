@@ -131,6 +131,10 @@ Accepts both http and https
 If a request for a content is made by a public internet client, and if that images is not in edge cahce, then a request will send to the origin to get a copy
 of that content. This type of request is origin request. By default the connection to origin is http
 
+If the origin is an S3 bucket, then proper permission needs to be designed. Other wise the request will fail
+If we provide public access to S3 bucket, the cotent can be accessed directly which is not the purpose
+Inorder to restrict the access to cloudfront distribution which is nothing but origin, you need to create OAI (Origin Access Identity)
+
 
 
 
