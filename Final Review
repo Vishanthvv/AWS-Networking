@@ -135,6 +135,30 @@ If the origin is an S3 bucket, then proper permission needs to be designed. Othe
 If we provide public access to S3 bucket, the cotent can be accessed directly which is not the purpose
 Inorder to restrict the access to cloudfront distribution which is nothing but origin, you need to create OAI (Origin Access Identity)
 
+Signed URLS
+
+Restrict access to individual files
+Supprts clients that dont use cookies
+
+Signed cookies
+
+Restrict access to multiple files
+
+
+Geographic restricions.
+
+Prevent request for a content from restricted countries
+There is an allow-block request
+
+Origin access policy 
+Is mainly used when the origin is not S3
+
+
+
+
+
+
+
 
 
 
