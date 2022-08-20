@@ -153,6 +153,33 @@ There is an allow-block request
 Origin access policy 
 Is mainly used when the origin is not S3
 
+Origin request to S3 static websites always use HTTP only
+Origin request to S3 bucket that support HTTPS always use match viewer
+
+Field level encryption
+
+Encrytps selected data in PUT or POST operations
+Works in addtions to https
+Uses asymmetric encryption
+
+Origin access policy, custom http headers and geo restrictions are configured at the distribution level
+Viewer protocol policy, field level encryption, and digitally signed access are configured at the behavior level
+Access to S3 buckets can be restricted using OAI and S3 bucket policies
+Access to custom origins can be restricted by using custom HTTP headers
+
+
+Cloud front is AWS managed content delivery network as a service
+Uses AWS ppoints of presence and infrastructure for performance and security
+Cache copies of requested data at locations geographically closer to requesting clients
+Reduce latency of the content which is frequently accessed
+Regional edge cache is a mid tier cache
+Support longer cache retention than edge locations
+Cloud front distribution define how cloudfront handles requests for content
+
+
+
+
+
 
 
 
