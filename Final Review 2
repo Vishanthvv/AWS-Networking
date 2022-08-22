@@ -19,4 +19,15 @@ In any router configuration, static will be having high priority
 Direct connect will always use dynamic routing
 Routes learned by the VGWs need to be added in the route tables within attached VPC. This can be done by static or route propogation at the route table level
 
+BGP TCP port - 179
+
+iBGP - Interior border gateway protocol
+eBGP - Exterior border gateway protocol
+
+BGP allows different autonomous systems to share the network route information with each other
+
+Weight only applies to the local BGP router
+Prefix learned from a iBGP peer are never advertised to other iBGP peers
+
+You cannot change the VGW routing configuration to change the BGP routing weightage and prefix because VGW configuration is a AWS managed service
 
