@@ -43,14 +43,18 @@ Client to site VPN
 
 AWS Supported VPN Protocols -
 
-
 IPSEC is a collection of protocols that autheticates VPN conection and encrypt the data over the VPN. AWS site to site VPN only supports IPSEC tunnels
 IKE - Internet key exchange protocol
 It is an encryption key management protocol. 
 
-
 Policy based VPN
 Route based VPN
+
+Customer gateway -
+
+Is a VPN device at the customer network
+
+
 
  
  
