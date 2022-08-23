@@ -31,3 +31,28 @@ Prefix learned from a iBGP peer are never advertised to other iBGP peers
 
 You cannot change the VGW routing configuration to change the BGP routing weightage and prefix because VGW configuration is a AWS managed service
 
+VPN - Virtual private network
+Encapsulates the private and encrypt the same
+
+VPN tunnel is a logical tunnel. Tunnel will be active if the traffic is in place. If traffic acroos the tunnel is stopped the tunnel will be terminated.
+
+2 types VPN
+
+Site to Site VPN  
+Client to site VPN
+
+AWS Supported VPN Protocols -
+
+
+IPSEC is a collection of protocols that autheticates VPN conection and encrypt the data over the VPN. AWS site to site VPN only supports IPSEC tunnels
+IKE - Internet key exchange protocol
+It is an encryption key management protocol. 
+
+
+Policy based VPN
+Route based VPN
+
+ 
+ 
+
+
