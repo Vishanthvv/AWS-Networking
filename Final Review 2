@@ -1,19 +1,26 @@
 The AWS hyperplane creates a shared ENI per AZ when the lambda funcion is first created
+
 When setting up a health check for a network load balancer you have the option to choose from the protocols of TCP, HTTP, and HTTPS.
+
 The enableDnsHostnames attribute can be enabled to allow public DNS names to be assigned to EC2 instances inside your VPC.
+
 To provide end-to-end encryption (mutual authentication) from the client to the application, we can use a TCP pass through from a classic or network load balancer.
+
 VPW is a managed service. Works as a router to connect your VPC to a non AWS data center
+
 Can be associated with multiple external connections.
+
 Can attach to a one VPC at a time
-VGW will work with Site to Site VPN and Direc connect
+
+VGW will work with Site to Site VPN and Direct connect
 
 ASN - Autonomous system number
-Are used to identify the organisational networks that are participating in the global border gateway protocolrouting infrastructure
+Are used to identify the organisational networks that are participating in the global border gateway protocol routing infrastructure
 All ASN will be having a unique number
 Default ASN for amazon is 64512 in all regions
 VGWs must be assigned a private ASN in order to support potential BGP route learning
 
-In dynamic routing, routers will configured to share the knowledge of the available network destination with each other by communicating by a rotuing protocol
+In dynamic routing, routers will configured to share the knowledge of the available network destination with each other by communicating by a routing protocol
 VPC route tables will also need routes that point to the onprem networks
 In any router configuration, static will be having high priority
 Direct connect will always use dynamic routing
