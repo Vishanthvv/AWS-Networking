@@ -113,6 +113,16 @@ First you need to create a VGW
 Second CGW
 Third VPN 
 
+Resources in Onprem can only communicate to AWS resources usin site to site VPN
+Viceversa will fail
+
+Direct is always on in both directions.
+Traffic uses dedicated infrastructure
+Includes a flat hourly port charges
+If you want a fast network from onprem to AWS and viceversa, Direct connect is the solution
+
+Hybrid DNS will enable private DNS resolution across connected cloud and on-prem networks
+
 
 
 
