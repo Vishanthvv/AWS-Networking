@@ -123,6 +123,34 @@ If you want a fast network from onprem to AWS and viceversa, Direct connect is t
 
 Hybrid DNS will enable private DNS resolution across connected cloud and on-prem networks
 
+Dedicated, high throughput, low-latency connection to an AWS region
+AWS customer may provision their own networking hardware at a DX location or work through a DX partner
+
+Customer traffic is isolated using VLANs
+
+All connection must be single mode fiber
+Either 1000base LX or 10G base LR transceivers
+Disable auto negotiation in all ports used for DX
+802.IQ VLAN encapsulation must be supported across entire connection
+Devices must support BGP and BGP MD5 authentication
+
+DX Connections
+
+Dedicated DX connection use customer managed hardware at the DX location
+DX hosted connection provides more flexible options interms of throughput and price
+DX hosted connection can be established more faster than dedicated connection
+
+DX connections are layer 2 connections 
+Layer 2 does not directly support IP traffic
+
+Communcations with AWS will happen through Layer3
+DX virtual interface provides layer 3 connectivity
+
+3 Types
+
+Private VIF - Connects to private AWS networks
+Private VIF can attach to a single VGW or a single Direct connect gateway with then to connect upto 10 VPC
+
 
 
 
