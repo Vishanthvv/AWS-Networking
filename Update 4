@@ -151,6 +151,23 @@ DX virtual interface provides layer 3 connectivity
 Private VIF - Connects to private AWS networks
 Private VIF can attach to a single VGW or a single Direct connect gateway with then to connect upto 10 VPC
 
+Transit VIF - 
+
+Public VIF - Connects to public AWS networks without internet
+
+DX dedicated support connection supports upto 50 public or private VIFs
+Only 1 transit VIF
+These are hard limits
+
+
+DX hosted connections supports on a single VIF
+Hosted VIFS are used to share a DX connection with other AWS accounts
+
+Virtual interfaces allows IP communication over DX connections
+
+
+
+
 
 
 
