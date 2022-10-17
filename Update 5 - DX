@@ -1,0 +1,77 @@
+AWS Direct connect and Hybrid
+
+AWS S2S VPN are only initiated from Onprem to AWS
+VPN traffic uses public infrastructure
+
+VPN uses out to internet data transfer billing rates
+VGW is limited to a maximum of 1.25 GBPs for all VPN connections
+
+DX connections are always ON on both direction
+Traffic uses a dedicated infrastructure 
+Reduced rates for data transfer charges
+Flat hourly port charges
+10 Gbps max per connection
+Multiple connections can be created and used simultaneously, maximum combined speed of maximum 40GBPS
+
+Hybrid DNS enables private DNS resolution across connected cloud and on-prem networks
+
+DX - Is a direct connect, High Throughput, Dedicated, Low latency to an AWS region
+
+Accessed by Globally placed DX locations
+AWS customer can provide thier own hardware at DX locations or use partner hardware
+Customers traffic is isolated by VLANS in AWS
+
+In DX locations, AWS installed its own hardware and connected with the AWS datatcenter with a high throughput link
+
+Hardware configuration requirements :-
+
+Single mode fiber
+Either 1000 Base LX (1 GBPS) or 10GBase-LR (10 GBPS) transceivers
+Disable auto negotiation on all ports used with BGP
+No static routing in DX
+802.IQ VLAN encapsulation must be supported across entire connection
+Devices must support BGP and BGP md5 authentication
+Bi-directional forwarding detection is supported but not required
+
+Customer must estalish connection with DX location using local telco carrier
+Customer might be fully or partially responsible for hardware at DX locations
+
+Why do we need virtual interfaces?
+
+We need virtual interfaces because by themselves DX connections are layer 2 circuits
+DX connections do not directly support IP traffic
+Virtual interface allow IP communication over DX connections
+
+
+Communications with AWS services is layer 3
+
+DX Virtual interface provide layer 3 connectivity
+
+Private VIFs connect to private AWS networks
+
+Private VIFs can attach to either
+A single VGW
+A single direct connect gateway which can connect upto 10 different VPCs in different regions
+
+Public Virtual Interface -
+
+Public VIFs connect to AWS Public services
+
+Public VIF allows you to connect all AWS services in all public regions without using internet
+
+Layer 2 networks can be logically divided into virtual LANS
+
+Each VIF must run on its own VLAN
+
+Hosted VIF will connect only a single VLAN
+
+Hosted VIF allows a DX connection owned by one AWS account to be used by a different account
+Hosted VIFs are created by the owner of of the DX connection and offered to the other AWS account
+
+
+
+
+
+
+
+
