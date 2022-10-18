@@ -68,6 +68,11 @@ Hosted VIF will connect only a single VLAN
 Hosted VIF allows a DX connection owned by one AWS account to be used by a different account
 Hosted VIFs are created by the owner of of the DX connection and offered to the other AWS account
 
+Without a direct connect gateway, a VIF will connect only to a single VPC
+VLAN ID will be On-prem VLAN (VIF Configuration in AWS)
+
+
+
 
 
 
