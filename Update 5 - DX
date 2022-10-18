@@ -71,6 +71,66 @@ Hosted VIFs are created by the owner of of the DX connection and offered to the 
 Without a direct connect gateway, a VIF will connect only to a single VPC
 VLAN ID will be On-prem VLAN (VIF Configuration in AWS)
 
+VIFs have a maximum number of prefixes that can be advertised to AWS
+
+Private VIFs - 100
+Public VIFs - 1000
+
+Exeeding this limit will cause the BGP sessions to go to the IDLE state
+
+VGWs assocoated with private VIFs advertise all known routes
+VGWs associated with DX gateways must specifiy allowed prefixes to be advertised
+All VIFs requried a customer configured BGP peer
+
+LAG (Link Aggregation Group)
+
+A collection of multiple physical links combined into to a single, logical link
+
+All DX connection in a LAG must use the same bandwidth, must terminate at the same DX location
+
+Maximum of 4 connections per LAG
+Maximum of 10 LAGS per region
+
+Customer side LAGS must be created to support VIF traffic
+
+Note - Hosted connections cannot bundle into a LAG
+
+
+What are DC gateways?
+
+Global services that facilitates DX connectivity to multiple AWS regions
+A bridge between transit or private VIFs and othe AWS networking objects
+No interaction with public VIFs
+Are free of charge
+
+By itself, A Private VIF can connect only to a single VGW
+DX gateways may connect a single private VIF upto 10 VGWs in any public region
+
+DX gateways are global service
+
+VPCs connecting through a DX gateway cannot have overlapping IP ranges
+Only sessions via a single VIF to one connected VPC at a time are allowed
+
+You cannot send traffic - from one associated VPC to another
+from one connected VIF to another
+from a connected VIF through a VPN connection using an associated VPG
+
+Well Architected DX
+
+Resiliency  
+
+Multiple connections at single DX location
+Multiple DX locations
+Implement LAGS
+
+
+AWS does not encrypt DX traffic
+VPN tunnels may be established from on-prem to EC2 based VPN systems
+
+AWS site to site via public VIF
+
+
+
 
 
 
